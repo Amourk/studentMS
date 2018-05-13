@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="cn.yy.dao.user.selectActivityDao">
+    <select id="selectActivityId" resultType="cn.yy.entity.student_activity" parameterType="String">
+        SELECT activity_id FROM studentactivity WHERE student_id =#{studentId}
+
+    </select>
+    <select id="selectActivity" resultType="cn.yy.entity.activity" parameterType="String">
+        SELECT * FROM activity WHERE activity_id =#{activityId}
+    </select>
+</mapper>

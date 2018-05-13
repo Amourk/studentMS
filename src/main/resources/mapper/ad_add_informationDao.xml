@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.yy.dao.Administrator.ad_add_informationDao">
+<insert id="addInformation"  parameterType="cn.yy.entity.student">
+       INSERT INTO
+       student(student_id,student_name,student_sex,student_department,student_class,student_place,student_birthday,student_inschool)
+        VALUE
+       (#{studentId},#{studentName},#{studentSex},#{studentDepartment},#{studentClass},#{studentPlace},#{studentBirthday},#{studentInschool})
+
+     </insert>
+</mapper>
+
+
+
+

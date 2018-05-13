@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.yy.dao.user.abnormalDao">
+<insert id="addAbnormal"  parameterType="cn.yy.entity.abnormal">
+       INSERT INTO abnormal(student_id,abnormal_thing,abnormal_time,abnormal_id) VALUE (#{studentId},#{abnormalThing},#{abnormalTime},#{abnormalId})
+
+     </insert>
+</mapper>
+
+
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.yy.dao.Administrator.ad_add_gradeDao">
+<insert id="add_grade"  parameterType="cn.yy.entity.grade">
+       INSERT INTO
+       studentcourse(student_id,course_id,course_score)
+        VALUE
+       (#{studentId},#{courseId},#{courseScore})
+
+     </insert>
+</mapper>
+
+
+
+

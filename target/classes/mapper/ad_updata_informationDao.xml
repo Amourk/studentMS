@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.yy.dao.Administrator.ad_updata_informationDao">
+<update id="updata"  parameterType="cn.yy.entity.student">
+       UPDATE student SET
+       student_id=#{studentId},student_name=#{studentName},student_sex=#{studentSex},student_department=#{studentDepartment},
+       student_class=#{studentClass},student_place=#{studentPlace},student_birthday=#{studentBirthday},student_inschool=#{studentInschool}
+       WHERE
+       student_id=#{studentId}
+     </update>
+</mapper>
+
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.yy.dao.user.queryDao">
+<select id="queryByName" resultType="cn.yy.entity.student" >
+    SELECT * FROM student WHERE student_name LIKE #{studentName}
+
+     </select>
+    <select id="queryById" resultType="cn.yy.entity.student" parameterType="String">
+        SELECT * FROM student WHERE student_id =#{studentId}
+
+    </select>
+    <select id="queryResult" resultType="cn.yy.entity.student_course" parameterType="String">
+        SELECT course_score FROM studentcourse WHERE student_id =#{studentId}
+
+    </select>
+    <select id="queryId" resultType="cn.yy.entity.student" parameterType="String">
+        SELECT student_id FROM student WHERE student_department =#{studentDepartment}
+
+    </select>
+    <select id="queryIdBygrade" resultType="cn.yy.entity.grade" parameterType="float">
+        SELECT student_id FROM grade WHERE student_test =#{studentTest}
+
+    </select>
+
+</mapper>
+
+
+
+
